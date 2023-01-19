@@ -18,7 +18,7 @@ const blogSchema = mongoose.Schema(
                     }
                 }
             ]
-        },
+        },  
         user: {
             type: Object,
             properties: {
@@ -49,7 +49,8 @@ const blogSchema = mongoose.Schema(
             type: String
         },
         publicDate: {
-            type: String
+            type: Date,
+            default: Date.now
         },
         isTrending: {
             type: Boolean
@@ -81,7 +82,8 @@ const blogSchema = mongoose.Schema(
                     type: Object,
                     properties: {
                         publicDate: {
-                            type: String
+                            type: Date,
+                            default: Date.now
                         },
                         favourite: {
                             type: Number
@@ -121,7 +123,8 @@ const blogSchema = mongoose.Schema(
                                             },
                                         },
                                         publicDate: {
-                                            type: String
+                                            type: Date,
+                                            default: Date.now
                                         },
                                         favourite: {
                                             type: Number
